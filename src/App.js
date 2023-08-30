@@ -3,8 +3,9 @@ import { useState, useRef } from "react";
 
 const crosswordPuzzles = [
   {
-    question: "Quel était le nom romain du dieu grec des océans ?",
-    answer: "Neptune",
+    question:
+      "A quoi correspond ce numéro atomique 57 dans la table de Mendeleïev ?",
+    answer: "Lanthane",
     key: "1",
   },
   {
@@ -25,20 +26,19 @@ const crosswordPuzzles = [
     key: "4",
   },
   {
-    question:
-      "A quoi correspond ce numéro atomique 57 dans la table de Mendeleïev ?",
-    answer: "Lanthane",
+    question: "Fruit de la vigne",
+    answer: "Raisin",
     key: "5",
   },
   {
-    question: "Quel est le composant principale du guacamole ?",
-    answer: "Avocat",
+    question:
+      "Mon drapeau est composé de trois nuances : le rouge, le bleu et le blanc",
+    answer: "Norvege",
     key: "6",
   },
   {
-    question:
-      "Quelle est la véritable identité de celui qui a créer ce mot croisé ?",
-    answer: "Sylvain",
+    question: "Marque de cigarette commencant par E",
+    answer: "Elixyr",
     key: "7",
   },
 ];
@@ -131,11 +131,13 @@ const App = () => {
       </div>
       {allAnswers.every((item) => item.isCorrect) ? (
         <div>
-          Félicitations, tu viens de réussir tous les mots croisés. Il ne te
-          reste plus qu'a trouver le nom suite aux réponses que tu as donnée.
+          Félicitations, tu viens de décoder le code. Il ne te reste plus qu'a
+          trouver le nom secret et de le transmettre à ton référent par sms
+          (+33642041916).
         </div>
       ) : (
         <div>
+          <p>Mettre les réponses sans accents.</p>
           {crosswordPuzzles.map((crossword, index) => {
             const { question } = crossword;
             return (
