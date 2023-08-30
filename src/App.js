@@ -133,11 +133,17 @@ const App = () => {
         <div>
           Félicitations, tu viens de décoder le code. Il ne te reste plus qu'a
           trouver le nom secret et de le transmettre à ton référent par sms
-          (+33642041916).
+          (+33642041916) afin de savoir les mesures a prendre.
         </div>
       ) : (
         <div>
+          <p>Règle</p>
           <p>Mettre les réponses sans accents.</p>
+          <p>Les cases seront vert une fois que vous aurez valider le mot</p>
+          <p>
+            Vous devez résoudre ces mots croisés. Il renferme un indice
+            permettant d'identifier le traître
+          </p>
           {crosswordPuzzles.map((crossword, index) => {
             const { question } = crossword;
             return (
